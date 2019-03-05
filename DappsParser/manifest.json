@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	
+	"name": "Dapps Parser",
+	"version": "0.0.1",
+	"description": "Parse Dapps info from dappradar.com",
+	"browser_action": {
+		"default_title": "Dapps Parser",
+		"default_popup": "popup.html",
+		"default_icon": "import.png"
+	},
+	"content_scripts": [{
+		"css": ["styles.css"],
+		"js": ["content.js","jquery-1.4.3.min.js"],
+		"web_accessible_resources": ["import.png"],
+		"matches": ["https://www.dappradar.com/*"]
+	}],
+	"permissions": [
+      "storage"
+    ]
+}
